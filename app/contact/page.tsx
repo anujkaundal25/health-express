@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { AreaMap } from "@/components/Blocks";
-import { ContactForm } from "@/components/Forms";
-import PageHero from "@/components/PageHero";
-import { site } from "@/lib/site";
+import { AreaMap } from "@/components/shared/blocks";
+import { ContactForm } from "@/components/shared/forms";
+import PageHero from "@/components/shared/page-hero";
+import { site } from "@/components/data/site";
 
 export const metadata: Metadata = {
   title: "Contact Us | Health Express Ambulette – (917) 514-3080",

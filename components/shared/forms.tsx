@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { bookingOptions, contactLocations, site } from "@/lib/site";
+import { bookingOptions, contactLocations, site } from "@/components/data/site";
 
 type Status = "idle" | "sending" | "ok" | "error";
 

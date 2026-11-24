@@ -1,6 +1,6 @@
 "use client";
 
-import { fleetPhotos } from "@/lib/site";
+import { fleetPhotos } from "@/components/data/site";
 
 const FALLBACK = "/images/home/fleet-hero.jpg";
 

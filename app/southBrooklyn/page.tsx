@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { AreaMap, Neighborhoods, ServicesGrid, Split } from "@/components/Blocks";
-import PageHero from "@/components/PageHero";
-import { brooklynNeighborhoods } from "@/lib/site";
+import { AreaMap, Neighborhoods, ServicesGrid, Split } from "@/components/shared/blocks";
+import PageHero from "@/components/shared/page-hero";
+import { brooklynNeighborhoods } from "@/components/data/site";
 
 export const metadata: Metadata = {
   title: "South Brooklyn Ambulette | Non-Emergency Transportation | Health Express Ambulette",

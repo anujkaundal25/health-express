@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CallBand, ServicesGrid } from "@/components/Blocks";
-import Faq from "@/components/Faq";
-import { ScheduleFullForm } from "@/components/Forms";
-import { Icon } from "@/components/Icons";
-import JsonLd, { faqSchema } from "@/components/JsonLd";
-import PageHero from "@/components/PageHero";
-import { servicePages, site } from "@/lib/site";
+import { CallBand, ServicesGrid } from "@/components/shared/blocks";
+import Faq from "@/components/shared/faq";
+import { ScheduleFullForm } from "@/components/shared/forms";
+import { Icon } from "@/components/shared/icons";
+import JsonLd, { faqSchema } from "@/components/shared/json-ld";
+import PageHero from "@/components/shared/page-hero";
+import { servicePages, site } from "@/components/data/site";
 
 type Props = { params: Promise<{ slug: string }> };
 

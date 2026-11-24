@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { CallBand, ServicesGrid } from "@/components/Blocks";
-import PageHero from "@/components/PageHero";
-import { Steps, TransportServices } from "@/components/Sections";
+import { CallBand, ServicesGrid } from "@/components/shared/blocks";
+import PageHero from "@/components/shared/page-hero";
+import Steps from "@/components/home/steps";
+import TransportServices from "@/components/home/transport-services";
 
 export const metadata: Metadata = {
   title: "Ambulette & Medical Transportation Services NYC | Health Express Ambulette",

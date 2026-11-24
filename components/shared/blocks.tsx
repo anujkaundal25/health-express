@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { TiltCard } from "@/components/Effects";
-import { Icon } from "@/components/Icons";
-import { servicePages, site } from "@/lib/site";
+import { TiltCard } from "@/components/shared/effects";
+import { Icon } from "@/components/shared/icons";
+import { servicePages, site } from "@/components/data/site";
 
 /** All 5 services as 3D tilt cards that link to their pages. */
 export function ServicesGrid({ title, exclude }: { title?: React.ReactNode; exclude?: string }) {

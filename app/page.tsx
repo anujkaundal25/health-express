@@ -1,12 +1,19 @@
-import { AreaMap } from "@/components/Blocks";
-import Faq from "@/components/Faq";
-import FleetCarousel from "@/components/FleetCarousel";
-import JsonLd, { faqSchema } from "@/components/JsonLd";
-import ScheduleForm from "@/components/ScheduleForm";
-import {
-  BookStrip, FacilitiesServices, Fleet, Hero, Marquee, PhotoBand, Services, Steps, TransportServices, WorkPartners,
-} from "@/components/Sections";
-import { faqs } from "@/lib/site";
+import About from "@/components/home/about";
+import BookStrip from "@/components/home/book-strip";
+import FacilitiesServices from "@/components/home/facilities-services";
+import Hero from "@/components/home/hero";
+import Marquee from "@/components/home/marquee";
+import PhotoBand from "@/components/home/photo-band";
+import Services from "@/components/home/services";
+import Steps from "@/components/home/steps";
+import TransportServices from "@/components/home/transport-services";
+import WorkPartners from "@/components/home/work-partners";
+import { AreaMap } from "@/components/shared/blocks";
+import Faq from "@/components/shared/faq";
+import FleetCarousel from "@/components/shared/fleet-carousel";
+import JsonLd, { faqSchema } from "@/components/shared/json-ld";
+import ScheduleForm from "@/components/shared/schedule-form";
+import { faqs } from "@/components/data/site";
 
 export default function HomePage() {
   return (
@@ -16,7 +23,7 @@ export default function HomePage() {
       <BookStrip />
       <Marquee />
       <Services />
-      <Fleet />
+      <About />
       <WorkPartners />
       <FleetCarousel />
       <Steps />

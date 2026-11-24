@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Oswald } from "next/font/google";
-import Header from "@/components/Header";
-import { FloatingActions, Footer } from "@/components/Sections";
-import { Loader, PageEffects } from "@/components/Effects";
-import { site } from "@/lib/site";
+import { Footer, FloatingActions } from "@/components/ui/footer";
+import Header from "@/components/ui/header";
+import Loader from "@/components/ui/loader";
+import { PageEffects } from "@/components/shared/effects";
+import { site } from "@/components/data/site";
 import "./globals.css";
 
 const oswald = Oswald({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-oswald", display: "swap" });

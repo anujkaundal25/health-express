@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { ScheduleFullForm } from "@/components/Forms";
-import PageHero from "@/components/PageHero";
-import { Steps } from "@/components/Sections";
-import { site } from "@/lib/site";
+import { ScheduleFullForm } from "@/components/shared/forms";
+import PageHero from "@/components/shared/page-hero";
+import Steps from "@/components/home/steps";
+import { site } from "@/components/data/site";
 
 export const metadata: Metadata = {
   title: "Schedule an Ambulette Ride Online | Health Express Ambulette",

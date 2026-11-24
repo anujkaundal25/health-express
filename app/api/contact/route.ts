@@ -1,4 +1,4 @@
-import { contactLocations } from "@/lib/site";
+import { contactLocations } from "@/components/data/site";
 import { bad, clean, forward, ok, validEmail, validPhone } from "@/lib/forms";
 
 export async function POST(req: Request) {

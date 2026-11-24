@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site } from "@/lib/site";
+import { site } from "@/components/data/site";
 
 export default function NotFound() {
   return (

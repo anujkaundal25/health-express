@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { CallBand, Split } from "@/components/Blocks";
-import { TiltCard } from "@/components/Effects";
-import FleetCarousel from "@/components/FleetCarousel";
-import PageHero from "@/components/PageHero";
-import { Steps } from "@/components/Sections";
-import { about, site } from "@/lib/site";
+import { CallBand, Split } from "@/components/shared/blocks";
+import { TiltCard } from "@/components/shared/effects";
+import FleetCarousel from "@/components/shared/fleet-carousel";
+import PageHero from "@/components/shared/page-hero";
+import Steps from "@/components/home/steps";
+import { about, site } from "@/components/data/site";
 
 export const metadata: Metadata = {
   title: "About Us | Health Express Ambulette – NYC Medical Transportation Since 2009",

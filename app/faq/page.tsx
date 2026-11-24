@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { CallBand } from "@/components/Blocks";
-import Faq from "@/components/Faq";
-import JsonLd, { faqSchema } from "@/components/JsonLd";
-import PageHero from "@/components/PageHero";
-import { Steps } from "@/components/Sections";
-import { faqs, moreFaqs } from "@/lib/site";
+import { CallBand } from "@/components/shared/blocks";
+import Faq from "@/components/shared/faq";
+import JsonLd, { faqSchema } from "@/components/shared/json-ld";
+import PageHero from "@/components/shared/page-hero";
+import Steps from "@/components/home/steps";
+import { faqs, moreFaqs } from "@/components/data/site";
 
 const all = [...faqs, ...moreFaqs];
 

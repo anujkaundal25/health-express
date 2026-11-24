@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { bookingOptions } from "@/lib/site";
+import { bookingOptions } from "@/components/data/site";
 
 export default function ScheduleForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");

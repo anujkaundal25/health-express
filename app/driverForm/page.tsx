@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { DriverForm } from "@/components/Forms";
-import PageHero from "@/components/PageHero";
-import { driverRequirements, site } from "@/lib/site";
+import { DriverForm } from "@/components/shared/forms";
+import PageHero from "@/components/shared/page-hero";
+import { driverRequirements, site } from "@/components/data/site";
 
 export const metadata: Metadata = {
   title: "Apply as a Driver | Health Express Ambulette",

@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { faqs as defaultFaqs } from "@/lib/site";
+import { faqs as defaultFaqs } from "@/components/data/site";
 
 function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);

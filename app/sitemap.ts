@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { servicePages, site } from "@/lib/site";
+import { servicePages, site } from "@/components/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

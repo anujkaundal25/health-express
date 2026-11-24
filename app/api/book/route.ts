@@ -1,4 +1,4 @@
-import { bookingOptions } from "@/lib/site";
+import { bookingOptions } from "@/components/data/site";
 import { bad, clean, forward, ok, validEmail, validPhone } from "@/lib/forms";
 
 /** "Schedule Your Appointment" — short form (service + phone) and the full /schedule form. */

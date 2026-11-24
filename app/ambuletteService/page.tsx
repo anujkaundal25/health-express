@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { AreaMap, Neighborhoods, ServicesGrid, Split } from "@/components/Blocks";
-import Faq from "@/components/Faq";
-import JsonLd, { faqSchema } from "@/components/JsonLd";
-import PageHero from "@/components/PageHero";
-import ScheduleForm from "@/components/ScheduleForm";
-import { brooklynNeighborhoods, faqs, site } from "@/lib/site";
+import { AreaMap, Neighborhoods, ServicesGrid, Split } from "@/components/shared/blocks";
+import Faq from "@/components/shared/faq";
+import JsonLd, { faqSchema } from "@/components/shared/json-ld";
+import PageHero from "@/components/shared/page-hero";
+import ScheduleForm from "@/components/shared/schedule-form";
+import { brooklynNeighborhoods, faqs, site } from "@/components/data/site";
 
 export const metadata: Metadata = {
   title: "Ambulette Service Brooklyn NY | Health Express Ambulette",

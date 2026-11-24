@@ -1,4 +1,4 @@
-import type { IconName } from "@/lib/site";
+import type { IconName } from "@/components/data/site";
 
 const paths: Record<IconName, React.ReactNode> = {
   van: (
