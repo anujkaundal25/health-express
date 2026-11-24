@@ -14,6 +14,7 @@ import FleetCarousel from "@/components/shared/fleet-carousel";
 import JsonLd, { faqSchema } from "@/components/shared/json-ld";
 import ScheduleForm from "@/components/shared/schedule-form";
 import { faqs } from "@/components/data/site";
+import { AreaMap } from "@/components/shared/blocks";
 
 export default function HomePage() {
   return (
@@ -30,9 +31,10 @@ export default function HomePage() {
       <PhotoBand />
       <ScheduleForm />
       <TransportServices />
-      <FacilitiesServices />
-      {/* <PrivatePayTransportation /> */}
+      {/* <FacilitiesServices /> */}
+      <PrivatePayTransportation />
       {/* <Faq /> */}
+      <AreaMap showMap={false} />
     </>
   );
 }

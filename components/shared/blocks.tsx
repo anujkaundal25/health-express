@@ -55,7 +55,7 @@ export function CallBand() {
 }
 
 /** Brooklyn service area cards + Google Map. */
-export function AreaMap() {
+export function AreaMap({ showMap = true }: { showMap?: boolean }) {
   return (
     <section style={{ paddingTop: 40 }}>
       <div className="wrap">
@@ -76,9 +76,11 @@ export function AreaMap() {
             <p>{site.address.full}</p>
           </div>
         </div>
-        <div className="map-wrap reveal">
-          <iframe src={site.mapEmbed} title={`Map – ${site.address.full}`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
-        </div>
+        {showMap && (
+          <div className="map-wrap reveal">
+            <iframe src={site.mapEmbed} title={`Map – ${site.address.full}`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
+          </div>
+        )}
       </div>
     </section>
   );
