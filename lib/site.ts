@@ -11,7 +11,7 @@ export const site = {
   phone: "+1 (917)-514-3080",
   phoneHref: "tel:+19175143080",
   whatsapp: "https://wa.me/19175143080",
-  email: "dispatch@healthexpressambulette.com",
+  email: "info@healthexpressambulette.com",
   address: {
     street: "155 Water Street",
     city: "Brooklyn",
@@ -32,7 +32,7 @@ export const site = {
 
 export type NavItem = { label: string; href: string; children?: { label: string; href: string }[] };
 
-export type IconName = "van" | "heart" | "stairs" | "stethoscope" | "hospital" | "flask" | "wheelchair";
+export type IconName = "van" | "heart" | "stairs" | "stethoscope" | "hospital" | "flask" | "wheelchair" | "shield" | "dialysis" | "daycare" | "calendar";
 
 export type ServicePage = {
   slug: string;

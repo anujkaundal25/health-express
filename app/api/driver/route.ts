@@ -39,7 +39,7 @@ export async function POST(req: Request) {
 
 function NextResponseError() {
   return new Response(
-    JSON.stringify({ error: "We couldn't submit your application right now. Please call us or email dispatch@healthexpressambulette.com." }),
+    JSON.stringify({ error: "We couldn't submit your application right now. Please call us or email info@healthexpressambulette.com." }),
     { status: 503, headers: { "Content-Type": "application/json" } }
   );
 }

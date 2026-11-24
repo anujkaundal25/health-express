@@ -45,7 +45,7 @@ These URLs are the same as on the current site, so Google rankings carry over. S
 | sitemap.xml / robots.txt | `app/sitemap.ts`, `app/robots.ts` |
 
 ## Forms
-All forms are checked on the server. To receive them, set `FORMS_WEBHOOK_URL` in Vercel → Settings → Environment Variables. Point it at a Make.com or Zapier webhook that emails dispatch@healthexpressambulette.com or adds a row to a Google Sheet (see `.env.example`).
+All forms are checked on the server. To receive them, set `FORMS_WEBHOOK_URL` in Vercel → Settings → Environment Variables. Point it at a Make.com or Zapier webhook that emails info@healthexpressambulette.com or adds a row to a Google Sheet (see `.env.example`).
 - **Booking and contact forms:** if no webhook is set yet, the requests are kept in Vercel → Logs.
 - **Driver applications:** these include the license, SSN card and medical documents, so they are **never logged**. In production they are refused until `FORMS_WEBHOOK_URL` is set, so no applicant's documents get lost.
 - **Upload size:** Vercel limits a request to about 4.5 MB, so the form keeps the three documents under 4 MB in total.

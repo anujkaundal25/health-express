@@ -76,6 +76,32 @@ section{padding:120px 0;position:relative}
 .sec-head p{color:var(--muted)}
 .divider{width:90px;height:3px;margin:18px auto 0;background:var(--gold-grad);border-radius:3px}
 
+/* WORK PARTNERS */
+.work-partners{padding:80px 0;background:linear-gradient(180deg,var(--blue-900),var(--blue-800))}
+.work-partners .sec-head{margin-bottom:38px}
+.partner-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.partner-card{min-height:150px;padding:24px 18px;border-radius:16px;text-align:center;
+  border:1px solid rgba(200,167,101,.25);background:linear-gradient(160deg,rgba(62,79,98,.38),rgba(16,28,42,.72));
+  box-shadow:0 16px 36px rgba(0,0,0,.25);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:.3s}
+.partner-card:hover{transform:translateY(-6px);border-color:rgba(200,167,101,.55)}
+.partner-icon{width:58px;height:58px;border-radius:16px;background:var(--gold-grad);display:grid;place-items:center;
+  margin-bottom:14px;box-shadow:0 12px 24px rgba(200,167,101,.22)}
+.partner-icon svg{width:30px;height:30px;stroke:var(--blue-900);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.partner-card h3{font-size:1.12rem;color:var(--gold-light)}
+
+/* FACILITY SERVICES */
+.facilities-section{background:linear-gradient(180deg,var(--blue-800),var(--blue-900))}
+.facilities-section .sec-head{margin-bottom:38px}
+.facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.facility-card{min-height:150px;padding:24px 20px;border-radius:16px;text-align:center;
+  border:1px solid rgba(200,167,101,.25);background:linear-gradient(160deg,rgba(62,79,98,.38),rgba(16,28,42,.72));
+  box-shadow:0 16px 36px rgba(0,0,0,.25);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:.3s}
+.facility-card:hover{transform:translateY(-6px);border-color:rgba(200,167,101,.55)}
+.facility-icon{width:58px;height:58px;border-radius:16px;background:var(--gold-grad);display:grid;place-items:center;
+  margin-bottom:14px;box-shadow:0 12px 24px rgba(200,167,101,.22)}
+.facility-icon svg{width:30px;height:30px;stroke:var(--blue-900);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.facility-card h3{font-size:1.12rem;color:var(--gold-light)}
+
 /* 3D CARDS */
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
 .card3d{perspective:1000px}
@@ -243,6 +269,8 @@ footer li a:hover{color:var(--gold-light)}
 /* RESPONSIVE */
 @media(max-width:960px){
   .hero{align-items:flex-start}.hero-content{margin-top:0;padding-top:110px}.ecg{width:100%}
+  .partner-grid{grid-template-columns:repeat(2,1fr)}
+  .facility-grid{grid-template-columns:repeat(2,1fr)}
   nav ul{position:fixed;top:78px;right:0;left:0;flex-direction:column;gap:0;background:rgba(8,17,28,.97);padding:10px 24px;display:none;border-bottom:1px solid rgba(200,167,101,.3)}
   nav ul.show{display:flex}
   nav li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.05)}
@@ -487,7 +515,7 @@ a.contact-card:hover{transform:translateX(8px) perspective(600px) rotateY(-4deg)
   .f-grid,.f-grid-3{grid-template-columns:1fr}
   .call-band{padding:36px 26px;transform:none}
 }
-@media(max-width:560px){.grid-4.grid-3,.stat-row{grid-template-columns:1fr}}
+@media(max-width:560px){.partner-grid,.facility-grid,.grid-4.grid-3,.stat-row{grid-template-columns:1fr}}
 
 
 /* ===== Banner theme (LinkedIn banner look): steel slate, brushed gold, medical-cross grid, gold rules ===== */

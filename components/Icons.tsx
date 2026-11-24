@@ -49,6 +49,32 @@ const paths: Record<IconName, React.ReactNode> = {
       <path d="M7 15h10" />
     </>
   ),
+  shield: (
+    <>
+      <path d="M12 3 5 6v5c0 4.8 2.9 8.2 7 10 4.1-1.8 7-5.2 7-10V6l-7-3z" />
+      <path d="m9 12 2 2 4-4" />
+    </>
+  ),
+  dialysis: (
+    <>
+      <path d="M12 3v11" />
+      <path d="M8 7h8M9 11h6" />
+      <circle cx="12" cy="17" r="4" />
+      <path d="M10 17h4M12 15v4" />
+    </>
+  ),
+  daycare: (
+    <>
+      <circle cx="12" cy="6" r="2.5" />
+      <path d="M5 20v-5a7 7 0 0 1 14 0v5M8 20v-4M16 20v-4" />
+    </>
+  ),
+  calendar: (
+    <>
+      <rect x="3" y="5" width="18" height="16" rx="2" />
+      <path d="M7 3v4M17 3v4M3 10h18M8 14h3M14 14h3M8 18h3" />
+    </>
+  ),
 };
 
 export function Icon({ name }: { name: IconName }) {

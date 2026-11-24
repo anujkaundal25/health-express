@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact Us | Health Express Ambulette – (917) 514-3080",
   description:
-    "Contact Health Express Ambulette at 155 Water Street, Brooklyn NY 11201. Call (917) 514-3080, WhatsApp or email dispatch@healthexpressambulette.com. Open 24/7.",
+    "Contact Health Express Ambulette at 155 Water Street, Brooklyn NY 11201. Call (917) 514-3080, WhatsApp or email info@healthexpressambulette.com. Open 24/7.",
   alternates: { canonical: "/contact" },
 };
 

@@ -19,8 +19,8 @@ export function Hero() {
         <div className="hero-content">
           <div className="eyebrow">NYC Medical Transport</div>
           <h1>
-            <span>Making Expert</span>
-            <span className="gold">Ambulette Services for All</span>
+            <span>Your Trusted Partner in</span>
+            <span className="gold">Ambulette Services</span>
           </h1>
           <p>
             We provide reliable and comfortable ambulette service NYC and non-emergency ambulette transportation
@@ -73,6 +73,35 @@ export function Marquee() {
         {items.map((t, i) => <span key={i}>{t}</span>)}
       </div>
     </div>
+  );
+}
+
+export function WorkPartners() {
+  const partners = [
+    { name: "MAS", icon: "hospital" as const },
+    { name: "Ride Health", icon: "heart" as const },
+    { name: "Sentry", icon: "shield" as const },
+    { name: "MTM", icon: "van" as const },
+  ];
+
+  return (
+    <section className="work-partners" id="partners">
+      <div className="wrap">
+        <div className="sec-head reveal">
+          <div className="eyebrow">Trusted Transportation Partners</div>
+          <h2>We <span className="gold">Work</span></h2>
+          <div className="divider" />
+        </div>
+        <div className="partner-grid">
+          {partners.map((partner) => (
+            <div className="partner-card reveal" key={partner.name}>
+              <div className="partner-icon"><Icon name={partner.icon} /></div>
+              <h3>{partner.name}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -188,6 +217,37 @@ export function TransportServices() {
               <h3>{s.title}</h3>
               <p>{s.text}</p>
             </TiltCard>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function FacilitiesServices() {
+  const facilities = [
+    { title: "Dialysis Centers", icon: "dialysis" as const },
+    { title: "Chemotherapy Centers", icon: "stethoscope" as const },
+    { title: "Nursing Homes", icon: "hospital" as const },
+    { title: "Adult Day Cares", icon: "daycare" as const },
+    { title: "Children's Day Cares", icon: "heart" as const },
+    { title: "Standing Orders", icon: "calendar" as const },
+  ];
+
+  return (
+    <section className="facilities-section" id="facilities">
+      <div className="wrap">
+        <div className="sec-head reveal">
+          <div className="eyebrow">Reliable Facility Transportation</div>
+          <h2>Facilities &amp; <span className="gold">Healthcare Transportation Services</span></h2>
+          <div className="divider" />
+        </div>
+        <div className="facility-grid">
+          {facilities.map((facility) => (
+            <div className="facility-card reveal" key={facility.title}>
+              <div className="facility-icon"><Icon name={facility.icon} /></div>
+              <h3>{facility.title}</h3>
+            </div>
           ))}
         </div>
       </div>
