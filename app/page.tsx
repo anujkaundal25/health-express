@@ -4,6 +4,7 @@ import FacilitiesServices from "@/components/home/facilities-services";
 import Hero from "@/components/home/hero";
 import Marquee from "@/components/home/marquee";
 import PhotoBand from "@/components/home/photo-band";
+import PrivatePayTransportation from "@/components/home/private-pay-transportation";
 import Services from "@/components/home/services";
 import Steps from "@/components/home/steps";
 import TransportServices from "@/components/home/transport-services";
@@ -31,6 +32,7 @@ export default function HomePage() {
       <ScheduleForm />
       <TransportServices />
       <FacilitiesServices />
+      <PrivatePayTransportation />
       <Faq />
       <AreaMap />
     </>

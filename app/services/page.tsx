@@ -7,7 +7,7 @@ import TransportServices from "@/components/home/transport-services";
 export const metadata: Metadata = {
   title: "Ambulette & Medical Transportation Services NYC | Health Express Ambulette",
   description:
-    "Ambulette services, private medical transportation, two men assist over stairs, Medicaid ambulette and wheelchair transportation across NYC. Open 24/7.",
+    "Ambulette services, private medical transportation, two men assist over stairs, Medicaid ambulette, wheelchair and stretcher transportation across NYC. Open 24/7.",
   alternates: { canonical: "/services" },
 };
 

@@ -43,6 +43,13 @@ const paths: Record<IconName, React.ReactNode> = {
       <path d="M7.5 10.5a5.5 5.5 0 1 0 7.8 6.3" />
     </>
   ),
+  stretcher: (
+    <>
+      <circle cx="7" cy="8" r="1.7" />
+      <path d="M9 10h5a3 3 0 0 1 3 3v2H5v-2a3 3 0 0 1 3-3h1" />
+      <path d="M3 15h18M6 15v4m12-4v4" />
+    </>
+  ),
   flask: (
     <>
       <path d="M9 3h6M10 3v6L4 19a1.5 1.5 0 0 0 1.3 2h13.4a1.5 1.5 0 0 0 1.3-2L14 9V3" />

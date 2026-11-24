@@ -3,7 +3,7 @@ import { TiltCard } from "@/components/shared/effects";
 import { Icon } from "@/components/shared/icons";
 import { servicePages, site } from "@/components/data/site";
 
-/** All 5 services as 3D tilt cards that link to their pages. */
+/** Service cards linking to their detail pages. */
 export function ServicesGrid({ title, exclude }: { title?: React.ReactNode; exclude?: string }) {
   const list = servicePages.filter((s) => s.slug !== exclude);
   return (

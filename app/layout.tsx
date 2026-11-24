@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description: site.description,
   keywords: [
     "ambulette service NYC", "ambulette Brooklyn", "medical transportation NYC", "Medicaid ambulette",
-    "wheelchair transportation", "non-emergency medical transport", "Staten Island ambulette",
+    "wheelchair transportation", "stretcher transportation", "non-emergency medical transport", "Staten Island ambulette",
   ],
   alternates: { canonical: "/" },
   openGraph: {

@@ -32,7 +32,7 @@ export const site = {
 
 export type NavItem = { label: string; href: string; children?: { label: string; href: string }[] };
 
-export type IconName = "van" | "heart" | "stairs" | "stethoscope" | "hospital" | "flask" | "wheelchair" | "shield" | "dialysis" | "daycare" | "calendar";
+export type IconName = "van" | "heart" | "stairs" | "stethoscope" | "hospital" | "flask" | "wheelchair" | "stretcher" | "shield" | "dialysis" | "daycare" | "calendar";
 
 export type ServicePage = {
   slug: string;
@@ -205,6 +205,50 @@ export const servicePages: ServicePage[] = [
       { q: "Do you go to airports?", a: "Yes, we also serve airports and other locations, not only medical facilities." },
     ],
   },
+  {
+    slug: "stretcher-services",
+    title: "Stretcher Services",
+    short: "Non-emergency stretcher transportation planned around your mobility needs.",
+    icon: "stretcher",
+    photo: "ph-stretcher",
+    heroPhoto: "ph-stretcher",
+    image: "/images/stretcher.webp",
+    metaTitle: "Stretcher Services NYC | Health Express Ambulette",
+    metaDescription:
+      "Request non-emergency stretcher transportation in NYC. Contact Health Express Ambulette to discuss trip details and confirm availability.",
+    intro:
+      "Health Express provides private, non-emergency stretcher transportation for riders who need to travel lying down. Contact us in advance to discuss your trip, assistance needs, and access details so we can confirm availability and the right arrangement.",
+    sections: [
+      {
+        heading: "Plan your stretcher ride",
+        text: "When you call or request a ride, share the pickup and destination addresses, preferred timing, and any mobility or assistance needs. Our team can discuss access details and confirm whether we can accommodate the trip.",
+      },
+      {
+        heading: "Non-emergency transportation",
+        text: "Stretcher transportation is for planned, non-emergency trips. It is not ambulance service or emergency medical care. If you have an emergency, call 911.",
+      },
+    ],
+    bullets: {
+      heading: "Details to share when requesting a ride",
+      items: [
+        "Pickup and destination addresses",
+        "Requested date and appointment time",
+        "Mobility and assistance needs",
+        "Building access details, including stairs or elevators",
+        "A contact number for the rider or caregiver",
+      ],
+    },
+    faqs: [
+      {
+        q: "Can I book stretcher transportation for an emergency?",
+        a: "No. This is a non-emergency transportation service, not an ambulance. Call 911 for emergencies.",
+      },
+      {
+        q: "How do I confirm a stretcher ride is available?",
+        a: "Contact us with your trip details and assistance needs so our team can discuss availability and the right arrangement.",
+      },
+    ],
+  },
 ];
 
 export const nav: NavItem[] = [
@@ -285,7 +329,7 @@ export const steps = [
 // Photos from health-express-rho.vercel.app (downloaded by `npm run fetch-images`)
 export const fleetPhotos = Array.from({ length: 7 }, (_, i) => `/images/fleet/van-${i + 1}.jpg`);
 
-export const bookingOptions = ["Livery", "Ambulette", "Wheelchair", "2 Man Assist"];
+export const bookingOptions = ["Livery", "Ambulette", "Wheelchair", "Stretcher", "2 Man Assist"];
 export const contactLocations = ["Brooklyn", "Staten Island", "Queens", "Manhattan"];
 
 export const transportServices: { title: string; text: string; icon: IconName }[] = [

@@ -26,7 +26,7 @@ export default function Services() {
               </TiltCard>
             );
           })}
-          <div className="all-services-link reveal"><Link href="/services" className="btn btn-ghost">All 5 Services →</Link></div>
+          <div className="all-services-link reveal"><Link href="/services" className="btn btn-ghost">All 6 Services →</Link></div>
         </div>
       </div>
     </section>
