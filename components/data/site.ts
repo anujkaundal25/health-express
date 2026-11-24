@@ -348,6 +348,42 @@ export const transportServices: { title: string; text: string; icon: IconName }[
     text: "Have ongoing blood tests, MRI, and Catscan appointments? Once the doctor has set a schedule, ask the secretary to send it over to us for safe and comfortable ambulette services NYC and medical transportation services NYC.",
     icon: "flask",
   },
+  {
+    title: "Dialysis Centers",
+    icon: "dialysis",
+    text:
+      "Reliable transportation for patients traveling to and from regular dialysis treatments.",
+  },
+  {
+    title: "Chemotherapy Centers",
+    icon: "stethoscope",
+    text:
+      "Comfortable and dependable rides for patients attending chemotherapy and cancer care appointments.",
+  },
+  {
+    title: "Nursing Homes",
+    icon: "hospital",
+    text:
+      "Safe transportation services for nursing home residents attending medical appointments and other essential visits.",
+  },
+  {
+    title: "Adult Day Cares",
+    icon: "daycare",
+    text:
+      "Convenient daily transportation that helps adults access day care programs and support services.",
+  },
+  {
+    title: "Children's Day Cares",
+    icon: "heart",
+    text:
+      "Dependable transportation solutions designed to help children travel safely to and from day care facilities.",
+  },
+  {
+    title: "Standing Orders",
+    icon: "calendar",
+    text:
+      "Scheduled recurring transportation for patients who require regular medical visits and ongoing treatments.",
+  },
 ];
 
 export const faqs = [

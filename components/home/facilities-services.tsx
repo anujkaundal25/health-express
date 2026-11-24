@@ -15,6 +15,7 @@ export default function FacilitiesServices() {
             <div className="facility-card reveal" key={facility.title}>
               <div className="facility-icon"><Icon name={facility.icon} /></div>
               <h3>{facility.title}</h3>
+              <p>{facility.description}</p>
             </div>
           ))}
         </div>

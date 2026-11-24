@@ -9,7 +9,6 @@ import Services from "@/components/home/services";
 import Steps from "@/components/home/steps";
 import TransportServices from "@/components/home/transport-services";
 import WorkPartners from "@/components/home/work-partners";
-import { AreaMap } from "@/components/shared/blocks";
 import Faq from "@/components/shared/faq";
 import FleetCarousel from "@/components/shared/fleet-carousel";
 import JsonLd, { faqSchema } from "@/components/shared/json-ld";
@@ -32,9 +31,8 @@ export default function HomePage() {
       <ScheduleForm />
       <TransportServices />
       <FacilitiesServices />
-      <PrivatePayTransportation />
-      <Faq />
-      <AreaMap />
+      {/* <PrivatePayTransportation /> */}
+      {/* <Faq /> */}
     </>
   );
 }
