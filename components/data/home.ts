@@ -4,30 +4,35 @@ export const workPartners: {
   name: string;
   icon: IconName;
   description: string;
+  image: string;
 }[] = [
   {
     name: "MAS",
     icon: "hospital",
     description:
       "Reliable medical transportation services that help patients reach their healthcare appointments safely and on time.",
+    image: "/images/home/work1.webp"
   },
   {
     name: "Ride Health",
     icon: "heart",
     description:
       "Coordinated transportation solutions that connect patients with accessible and dependable healthcare rides.",
+    image: "/images/home/work2.webp"
   },
   {
     name: "Sentry",
     icon: "shield",
     description:
       "Trusted transportation support focused on passenger safety, reliability, and quality service.",
+    image: "/images/home/work3.webp"
   },
   {
     name: "MTM",
     icon: "van",
     description:
       "Non-emergency medical transportation solutions that make accessing essential healthcare easier.",
+    image: "/images/home/work4.webp"
   },
 ];
 
