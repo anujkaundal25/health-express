@@ -240,12 +240,7 @@ export function ContactForm() {
     setMsg("");
 
     try {
-      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
-      if (!accessKey) {
-        throw new Error(
-          "Web3Forms access key is missing. Check your .env.local file."
-        );
-      }
+      const accessKey = "38564f66-8b2d-45a2-8756-75fe93df1fe3";
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
