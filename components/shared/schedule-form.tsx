@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { bookingOptions } from "@/components/data/site";
+import { submitWeb3Forms } from "@/lib/web3forms";
 
 export default function ScheduleForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
@@ -10,17 +11,11 @@ export default function ScheduleForm() {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form)) as Record<string, string>;
+    const data = Object.fromEntries(new FormData(form).entries());
     setStatus("sending");
     setMsg("");
     try {
-      const res = await fetch("/api/book", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      const json = await res.json();
-      if (!res.ok) throw new Error(json.error || "Something went wrong");
+      await submitWeb3Forms("booking", data);
       setStatus("ok");
       setMsg("Thank you! Our team will call you shortly to confirm your ride.");
       form.reset();

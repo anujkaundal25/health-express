@@ -1,5 +1,13 @@
 import { bookingOptions } from "@/components/data/site";
-import { bad, clean, forward, ok, validEmail, validPhone } from "@/lib/forms";
+import {
+  bad,
+  clean,
+  forwardWeb3Forms,
+  ok,
+  unavailable,
+  validEmail,
+  validPhone,
+} from "@/lib/forms";
 
 /** "Schedule Your Appointment" — short form (service + phone) and the full /schedule form. */
 export async function POST(req: Request) {
@@ -20,8 +28,5 @@ export async function POST(req: Request) {
   if (!validPhone(data.phone)) return bad("Please enter a valid contact number.");
   if (!validEmail(data.email)) return bad("Please enter a valid email address.");
 
-  const sent = await forward("booking", data);
-  // no webhook set yet? keep the request in the Vercel logs so it is not lost
-  if (!sent) console.log("[booking]", data);
-  return ok();
+  return (await forwardWeb3Forms("booking", data)) ? ok() : unavailable();
 }

@@ -8,10 +8,16 @@ import type {
   ReactNode,
 } from "react";
 import { bookingOptions, contactLocations, site } from "@/components/data/site";
+import { submitWeb3Forms, type Web3FormsType } from "@/lib/web3forms";
 
 type Status = "idle" | "sending" | "ok" | "error";
 
-function useSubmit(endpoint: string, okMsg: string, asMultipart = false) {
+function useSubmit(
+  endpoint: string | null,
+  okMsg: string,
+  asMultipart = false,
+  web3FormsType?: Web3FormsType
+) {
   const [status, setStatus] = useState<Status>("idle");
   const [msg, setMsg] = useState("");
 
@@ -23,27 +29,35 @@ function useSubmit(endpoint: string, okMsg: string, asMultipart = false) {
     setMsg("");
 
     try {
-      const response = await fetch(
-        endpoint,
-        asMultipart
-          ? { method: "POST", body: formData }
-          : {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(Object.fromEntries(formData.entries())),
-            }
-      );
-      const result: unknown = await response.json().catch(() => null);
+      if (web3FormsType) {
+        await submitWeb3Forms(
+          web3FormsType,
+          Object.fromEntries(formData.entries())
+        );
+      } else {
+        if (!endpoint) throw new Error("Form submission is unavailable.");
+        const response = await fetch(
+          endpoint,
+          asMultipart
+            ? { method: "POST", body: formData }
+            : {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(Object.fromEntries(formData.entries())),
+              }
+        );
+        const result: unknown = await response.json().catch(() => null);
 
-      if (!response.ok) {
-        const errorMessage =
-          typeof result === "object" &&
-          result !== null &&
-          "error" in result &&
-          typeof result.error === "string"
-            ? result.error
-            : "Something went wrong. Please call us.";
-        throw new Error(errorMessage);
+        if (!response.ok) {
+          const errorMessage =
+            typeof result === "object" &&
+            result !== null &&
+            "error" in result &&
+            typeof result.error === "string"
+              ? result.error
+              : "Something went wrong. Please call us.";
+          throw new Error(errorMessage);
+        }
       }
 
       setStatus("ok");
@@ -164,8 +178,10 @@ function Area({
 
 export function ScheduleFullForm() {
   const { status, msg, onSubmit } = useSubmit(
-    "/api/book",
-    "Thank you! Our team will call you shortly to confirm your ride."
+    null,
+    "Thank you! Our team will call you shortly to confirm your ride.",
+    false,
+    "booking"
   );
   const today = new Date().toISOString().slice(0, 10);
 
@@ -228,56 +244,12 @@ export function ScheduleFullForm() {
 }
 
 export function ContactForm() {
-  const [status, setStatus] = useState<Status>("idle");
-  const [msg, setMsg] = useState("");
-
-  async function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    setStatus("sending");
-    setMsg("");
-
-    try {
-      const accessKey = "38564f66-8b2d-45a2-8756-75fe93df1fe3";
-
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          ...Object.fromEntries(formData.entries()),
-          access_key: accessKey,
-          subject: "New Contact Form Enquiry - Health Express",
-          from_name: "Health Express Website",
-        }),
-      });
-      const result = await response.json();
-
-      if (!response.ok || result.success !== true) {
-        throw new Error(
-          result.message || "Failed to send your message. Please try again."
-        );
-      }
-
-      setStatus("ok");
-      setMsg(
-        "Thank you! We received your message and will get back to you shortly."
-      );
-      form.reset();
-    } catch (error) {
-      console.error("Web3Forms Error:", error);
-      setStatus("error");
-      setMsg(
-        error instanceof Error
-          ? error.message
-          : "Something went wrong. Please try again."
-      );
-    }
-  }
+  const { status, msg, onSubmit } = useSubmit(
+    null,
+    "Thank you! We received your message and will get back to you shortly.",
+    false,
+    "contact"
+  );
 
   return (
     <form className="form-card reveal" onSubmit={onSubmit}>
@@ -375,15 +347,7 @@ export function ContactForm() {
       >
         {status === "sending" ? "Sending..." : "Submit Now"}
       </button>
-      {msg && (
-        <div
-          className={`form-msg${status === "error" ? " err" : ""}`}
-          role="status"
-          aria-live="polite"
-        >
-          {msg}
-        </div>
-      )}
+      <Msg status={status} msg={msg} />
     </form>
   );
 }

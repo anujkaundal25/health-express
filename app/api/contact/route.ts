@@ -1,5 +1,13 @@
 import { contactLocations } from "@/components/data/site";
-import { bad, clean, forward, ok, validEmail, validPhone } from "@/lib/forms";
+import {
+  bad,
+  clean,
+  forwardWeb3Forms,
+  ok,
+  unavailable,
+  validEmail,
+  validPhone,
+} from "@/lib/forms";
 
 export async function POST(req: Request) {
   const b = await req.json().catch(() => null);
@@ -18,8 +26,5 @@ export async function POST(req: Request) {
   if (!contactLocations.includes(data.location)) return bad("Please select a location.");
   if (!data.message) return bad("Please enter a message.");
 
-  const sent = await forward("contact", data);
-  // no webhook set yet? keep the request in the Vercel logs so it is not lost
-  if (!sent) console.log("[contact]", data);
-  return ok();
+  return (await forwardWeb3Forms("contact", data)) ? ok() : unavailable();
 }
