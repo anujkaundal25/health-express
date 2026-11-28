@@ -412,6 +412,7 @@ nav ul{gap:22px}
 .crumbs{display:flex;flex-wrap:wrap;gap:6px;font-size:.82rem;color:var(--muted);margin-bottom:22px}
 .crumbs a:hover{color:var(--gold-light)}.crumbs em{font-style:normal;margin-left:6px;color:var(--gold)}
 .crumbs [aria-current]{color:var(--gold-light)}
+.page-hero-back{display:flex;width:fit-content;gap:7px;padding:8px 16px;margin-bottom:18px;font-size:.75rem}
 .page-hero-visual{position:relative;height:340px;perspective:1200px}
 .ph-card{position:absolute;inset:0 0 0 8%;border-radius:22px;border:2px solid rgba(200,167,101,.6);box-shadow:0 40px 90px rgba(0,0,0,.6);transform:rotateY(-16deg) rotateX(5deg);animation:phfloat 7s ease-in-out infinite}
 .ph-card::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(200deg,transparent 50%,rgba(8,17,28,.55))}
@@ -507,8 +508,6 @@ nav ul{gap:22px}
 .blog-article-section{padding:70px 0 120px}
 .blog-article{max-width:1120px}
 .blog-article-body{max-width:100%;margin:0 auto}
-.blog-back-link{display:inline-flex;gap:8px;align-items:center;margin:30px 0 24px;color:var(--gold-light);font-weight:600}
-.blog-back-link:hover{text-decoration:underline;text-underline-offset:4px}
 .blog-content{display:grid;gap:30px}
 .blog-text-section{max-width:760px;width:100%;margin:0 auto}
 .blog-markdown table{width:100%;margin:24px 0;border:1px solid rgba(200,167,101,.35);border-collapse:separate;border-spacing:0;table-layout:fixed;border-radius:14px;overflow:hidden;background:rgba(16,28,42,.8)}
@@ -520,20 +519,29 @@ nav ul{gap:22px}
 .blog-markdown tbody tr:nth-child(even) td{background:rgba(255,255,255,.025)}
 .blog-markdown tbody tr:last-child td{border-bottom:0}
 .blog-comparison-section,.blog-booking-section{max-width:100%;padding:24px;border:1px solid rgba(200,167,101,.3);border-radius:20px;background:linear-gradient(150deg,rgba(36,52,70,.8),rgba(16,28,42,.95));box-shadow:0 20px 50px rgba(0,0,0,.28)}
-.blog-comparison-section{overflow-x:auto}
+.blog-comparison-section,.blog-senior-options-section{overflow-x:auto}
 .blog-comparison-section h3,.blog-booking-section h3{margin-top:0}
-.blog-comparison-section table{min-width:640px;margin:24px 0 0}
+.blog-senior-options-section h3,.blog-checklist-section h3{margin-top:0}
+.blog-comparison-section table,.blog-senior-options-section table{min-width:640px;margin:24px 0 0}
 .blog-comparison-section thead th:first-child{width:18%;border-bottom:0;background:transparent}
 .blog-comparison-section thead th:nth-child(2){background:#101c2a;color:#fff}
 .blog-comparison-section thead th:nth-child(3){background:#c8a765;color:#08111c}
 .blog-comparison-section thead th:nth-child(4){background:#526174;color:#fff}
 .blog-comparison-section tbody td:first-child{width:18%;color:var(--gold-light)}
-.blog-booking-section ol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;counter-reset:booking-step;list-style:none;margin:34px 0 18px;padding:0}
+.blog-senior-options-section thead th:first-child{width:20%;border-bottom:0;background:transparent}
+.blog-senior-options-section thead th:nth-child(2){background:#101c2a;color:#fff}
+.blog-senior-options-section thead th:nth-child(3){background:#c8a765;color:#08111c}
+.blog-senior-options-section thead th:nth-child(4){background:#526174;color:#fff}
+.blog-senior-options-section tbody td:first-child{width:20%;color:var(--gold-light)}
+.blog-markdown.blog-booking-section ol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;counter-reset:booking-step;list-style:none;margin:34px 0 18px;padding:0}
 .blog-booking-section li{position:relative;counter-increment:booking-step;padding:82px 8px 0;text-align:center;font-size:.88rem;line-height:1.55}
 .blog-booking-section li::before{position:absolute;z-index:1;top:0;left:50%;display:grid;width:64px;height:64px;place-items:center;transform:translateX(-50%);border:3px solid #fff;border-radius:50%;background:#10213d;color:var(--gold);content:counter(booking-step);font-family:var(--font-oswald),sans-serif;font-size:2rem;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,.28)}
 .blog-booking-section li:not(:last-child)::after{position:absolute;top:31px;left:calc(50% + 32px);width:calc(100% + 18px - 64px);border-top:3px dotted var(--gold);content:""}
 .blog-booking-section li strong{display:block;margin-bottom:6px;color:var(--gold-light);font-family:var(--font-oswald),sans-serif;font-size:1.02rem;line-height:1.25}
 .blog-booking-section ol+p{text-align:center;color:var(--gold-light);font-size:.82rem;font-weight:600;letter-spacing:.04em}
+.blog-markdown.blog-checklist-section ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;list-style:none;margin:24px 0 0;padding:0}
+.blog-checklist-section li{display:flex;align-items:center;gap:14px;min-height:78px;padding:18px;border:1px solid rgba(200,167,101,.15);border-radius:13px;background:rgba(255,255,255,.055);color:var(--text);font-size:.94rem;font-weight:600;line-height:1.45}
+.blog-checklist-section li::before{display:grid;flex:0 0 30px;width:30px;height:30px;place-items:center;border-radius:6px;background:#10213d;color:var(--gold);content:"✓";font-size:1.2rem;font-weight:800}
 .blog-feature-card{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);grid-template-areas:"copy visual";gap:28px;align-items:center;padding:30px;border:1px solid rgba(200,167,101,.3);border-radius:22px;background:linear-gradient(150deg,rgba(36,52,70,.8),rgba(16,28,42,.95));box-shadow:0 24px 60px rgba(0,0,0,.35)}
 .blog-feature-card.image-left{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);grid-template-areas:"visual copy"}
 .blog-feature-copy{grid-area:copy}
@@ -599,8 +607,9 @@ a.contact-card:hover{transform:translateX(8px) perspective(600px) rotateY(-4deg)
   .page-hero-visual{height:230px;margin:0 6px}
   .blog-feature-card,.blog-feature-card.image-left{grid-template-columns:1fr;grid-template-areas:"copy" "visual";padding:22px}
   .blog-feature-visual{min-height:220px}
-  .blog-booking-section ol{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:24px}
+  .blog-markdown.blog-booking-section ol{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:24px}
   .blog-booking-section li:nth-child(2n)::after{display:none}
+  .blog-markdown.blog-checklist-section ul{grid-template-columns:1fr}
   .ph-ring{display:none}
   .split.reverse .split-photo{order:0}
   .split-photo{height:260px}

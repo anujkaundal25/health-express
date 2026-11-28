@@ -182,11 +182,19 @@ const blog: BlogPost[] = [
 
       ### Transportation Options for Seniors in NYC ###
 
-      1. **Family and friends.** The most personal option, but hard to sustain for frequent appointments, and not always safe for wheelchair users or patients who need help on stairs.
-      2. **Ambulette service.** A wheelchair-accessible van with trained staff who help from the door to the clinic. Best for seniors with limited mobility, wheelchair users, dialysis patients and hospital discharges. Learn more about our [ambulette service in Brooklyn](/ambuletteService) and read our [ambulette service guide](/blog/ambulette-service-in-brooklyn-ny-a-complete-guide-for-patients-and-families).
-      3. **Paratransit (Access-A-Ride).** New York City's public paratransit service for people who cannot use buses or subways. It requires an eligibility application, and trips are usually booked ahead and may be shared.
-      4. **Taxi or rideshare.** Convenient for seniors who can walk and get in and out of a car without help. Drivers are not trained to assist with wheelchairs or stairs.
-      5. **Public transit.** Affordable, but crowded stations, stairs and long walks make it difficult for many older adults.
+      Compare the main options for a medical trip. Learn more about our [ambulette service in Brooklyn](/ambuletteService) and read our [ambulette service guide](/blog/ambulette-service-in-brooklyn-ny-a-complete-guide-for-patients-and-families).
+
+      |  | Ambulette | Paratransit | Rideshare / Taxi |
+      | --- | --- | --- | --- |
+      | Door-to-door | Yes, including help inside and on stairs | Usually curb to curb | Curb to curb |
+      | Wheelchair | Lift-equipped, wheelchair secured | Accessible vehicles | Limited; request a wheelchair-accessible vehicle |
+      | Booking | Scheduled; same-day may be possible | Book in advance; eligibility needed | On demand |
+      | Who pays | Medicaid (approved) or private pay | Public fare | Private pay |
+      | Best for | Mobility needs, dialysis and discharge | Independent travellers | Seniors who walk unassisted |
+
+      **Match the ride to the rider's mobility, not just the price.**
+
+      Family and friends can be a personal option for occasional appointments, while public transit may work for seniors who travel independently. Both can be difficult to rely on for recurring visits or mobility needs.
 
       ### Does Medicaid Cover Transportation to Medical Appointments in New York? ###
 
@@ -218,11 +226,13 @@ const blog: BlogPost[] = [
 
       ### Appointment-Day Checklist ###
 
+      For families and caregivers in NYC:
+
       - Confirm the appointment time and address the day before.
       - Book the ride at least one to two days ahead when possible.
-      - Tell the ride provider about wheelchairs, walkers or stairs.
+      - Mention wheelchair, walker or stair needs.
       - Prepare photo ID, insurance and Medicaid cards.
-      - Pack a medication list, recent test results and the doctor's notes.
+      - Pack a medication list and the doctor's notes.
       - Plan the return trip before leaving home.
 
       ### Choosing the Right Senior Transportation Provider ###

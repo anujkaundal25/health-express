@@ -11,6 +11,7 @@ export default function PageHero({
   text,
   photo = "ph-hero",
   featuredImage,
+  backLink,
   crumbs,
   cta = true,
 }: {
@@ -19,6 +20,7 @@ export default function PageHero({
   text?: string;
   photo?: string;
   featuredImage?: { src: string; alt: string };
+  backLink?: Crumb;
   crumbs: Crumb[];
   cta?: boolean;
 }) {
@@ -36,14 +38,20 @@ export default function PageHero({
       </svg>
       <div className="wrap page-hero-grid">
         <div className="page-hero-text">
-          <nav className="crumbs" aria-label="Breadcrumb">
-            {all.map((c, i) => (
-              <span key={c.href}>
-                {i < all.length - 1 ? <Link href={c.href}>{c.label}</Link> : <span aria-current="page">{c.label}</span>}
-                {i < all.length - 1 && <em aria-hidden="true">/</em>}
-              </span>
-            ))}
-          </nav>
+          {backLink ? (
+            <Link className="btn btn-ghost page-hero-back" href={backLink.href}>
+              <span aria-hidden="true">←</span> {backLink.label}
+            </Link>
+          ) : (
+            <nav className="crumbs" aria-label="Breadcrumb">
+              {all.map((c, i) => (
+                <span key={c.href}>
+                  {i < all.length - 1 ? <Link href={c.href}>{c.label}</Link> : <span aria-current="page">{c.label}</span>}
+                  {i < all.length - 1 && <em aria-hidden="true">/</em>}
+                </span>
+              ))}
+            </nav>
+          )}
           <div className="eyebrow">{eyebrow}</div>
           <h1>{title}</h1>
           {text && <p>{text}</p>}

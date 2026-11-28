@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -60,7 +59,11 @@ function BlogContent({ content, slug }: { content: string; slug: string }) {
             ? " blog-comparison-section"
             : section.startsWith("### How to Book an Ambulette in Brooklyn ###")
               ? " blog-booking-section"
-              : "";
+              : section.startsWith("### Transportation Options for Seniors in NYC ###")
+                ? " blog-senior-options-section"
+                : section.startsWith("### Appointment-Day Checklist ###")
+                  ? " blog-checklist-section"
+                  : "";
 
           return (
             <div className={`blog-markdown blog-text-section${sectionType}`} key={index}>
@@ -135,6 +138,7 @@ export default async function BlogPostPage({ params }: Props) {
         title={post.title}
         text={post.metaDescription ?? getExcerpt(post.content)}
         featuredImage={{ src: post.img, alt: post.imgAlt ?? post.title }}
+        backLink={{ label: "All Blogs", href: "/blog" }}
         crumbs={[
           { label: "Blog", href: "/blog" },
           { label: post.title, href: `/blog/${post.slug}` },
@@ -144,9 +148,6 @@ export default async function BlogPostPage({ params }: Props) {
       <section className="blog-article-section">
         <article className="wrap blog-article">
           <div className="blog-article-body">
-            <Link className="blog-back-link" href="/blog">
-              <span aria-hidden="true">←</span> All articles
-            </Link>
             <BlogContent content={post.content} slug={post.slug} />
           </div>
         </article>
