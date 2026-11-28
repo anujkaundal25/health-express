@@ -13,10 +13,21 @@ type BlogPost = {
 const blog: BlogPost[] = [
   {
     id: 1,
-    slug: "ambulette-service-in-brooklyn-ny-a-complete-guide-for-patients-and-families",
+    slug: "ambulette-service-brooklyn-ny-guide",
     img: "/blog/blog1.webp",
     title:
       "Ambulette Service in Brooklyn, NY: A Complete Guide for Patients and Families",
+    metaTitle: "Ambulette Service Brooklyn NY: Complete 2026 Guide | Health Express",
+    metaDescription:
+      "Need an ambulette service in Brooklyn, NY? Learn who it is for, how Medicaid rides work, what to expect and how to book a safe wheelchair ride.",
+    keywords: [
+      "ambulette service brooklyn ny",
+      "ambulette Brooklyn",
+      "wheelchair transportation Brooklyn",
+      "Medicaid ambulette Brooklyn",
+      "non-emergency medical transportation Brooklyn",
+      "two man assist ambulette",
+    ],
     content: `
       Getting to a doctor's appointment should not be the hardest part of the day. Yet for many Brooklyn families, it is.
 
@@ -182,7 +193,7 @@ const blog: BlogPost[] = [
 
       ### Transportation Options for Seniors in NYC ###
 
-      Compare the main options for a medical trip. Learn more about our [ambulette service in Brooklyn](/ambuletteService) and read our [ambulette service guide](/blog/ambulette-service-in-brooklyn-ny-a-complete-guide-for-patients-and-families).
+      Compare the main options for a medical trip. Learn more about our [ambulette service in Brooklyn](/ambuletteService) and read our [ambulette service guide](/blog/ambulette-service-brooklyn-ny-guide).
 
       |  | Ambulette | Paratransit | Rideshare / Taxi |
       | --- | --- | --- | --- |
