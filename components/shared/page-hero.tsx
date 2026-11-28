@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/components/data/site";
 
@@ -9,6 +10,7 @@ export default function PageHero({
   title,
   text,
   photo = "ph-hero",
+  featuredImage,
   crumbs,
   cta = true,
 }: {
@@ -16,6 +18,7 @@ export default function PageHero({
   title: React.ReactNode;
   text?: string;
   photo?: string;
+  featuredImage?: { src: string; alt: string };
   crumbs: Crumb[];
   cta?: boolean;
 }) {
@@ -51,10 +54,24 @@ export default function PageHero({
             </div>
           )}
         </div>
-        <div className="page-hero-visual" aria-hidden="true">
-          <div className={`ph-card photo ${photo}`} />
-          <div className="ph-ring" />
-          <div className="ph-chip"><strong>24/7</strong><span>Same day? Call us</span></div>
+        <div className="page-hero-visual" aria-hidden={featuredImage ? undefined : true}>
+          {featuredImage ? (
+            <div className="ph-card blog-hero-image">
+              <Image
+                src={featuredImage.src}
+                alt={featuredImage.alt}
+                fill
+                priority
+                sizes="(max-width: 960px) 100vw, 40vw"
+              />
+            </div>
+          ) : (
+            <>
+              <div className={`ph-card photo ${photo}`} />
+              <div className="ph-ring" />
+              <div className="ph-chip"><strong>24/7</strong><span>Same day? Call us</span></div>
+            </>
+          )}
         </div>
       </div>
     </section>

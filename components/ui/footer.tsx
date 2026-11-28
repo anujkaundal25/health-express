@@ -27,6 +27,7 @@ export function Footer() {
               <li><Link href="/ambuletteService">Ambulette Service Brooklyn</Link></li>
               <li><Link href="/southBrooklyn">South Brooklyn</Link></li>
               <li><Link href="/faq">F.A.Q</Link></li>
+              <li><Link href="/blog">Blogs</Link></li>
               <li><Link href="/driverForm">Apply as Driver</Link></li>
               <li><Link href="/contact">Contact Us</Link></li>
             </ul>
